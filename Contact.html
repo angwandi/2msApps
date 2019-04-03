@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -23,7 +22,7 @@
     </form>
 </nav>-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,6 +53,58 @@
         </form>
     </div>
 </nav>
-<h1>Contact</h1>
+<div class="container" style="justify-content: center; margin-top: 55px">
+    <h1>Contact</h1>
+</div>
+<div id="googleMap" style="width:100%;height:400px; justify-content: center"></div>
+
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(-1.457540, 36.979198),
+            zoom: 5
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuojYKr4B2UtLAqYq98XBp4pvi3KviBmQ&callback=myMap"></script>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>Contact</h4>
+            <button>CALL NOW</button>
+            <p>+254741552312</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>Address</h4>
+            <button>GET DIRECTION</button>
+            <p>
+                44 myddleton rd<br>
+                Uxbridge<br>
+                UB82DN<br>
+                United Kingdom<br>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>Business Hours</h4>
+            <ul>
+                <li>Mon: 8:00 AM – 3:00 PM</li>
+                <li>Tue: 5:00 – 9:00 PM</li>
+                <li>Wed: 5:00 – 9:00 PM</li>
+                <li>Thu: 5:00 – 9:00 PM</li>
+                <li>Fri: 5:00 – 9:00 PM</li>
+                <li>Sat: Closed</li>
+                <li>Sun: 10:00 AM – 4:00 PM</li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
